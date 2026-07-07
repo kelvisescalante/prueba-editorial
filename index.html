@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,7 +24,7 @@
             color: #333;
         }
 
-        /* Cabecera / Menú */
+        /* Header / Navigation */
         header {
             background-color: var(--azul-profundo);
             padding: 15px 5%;
@@ -48,6 +48,7 @@
             width: 60px;
             border-radius: 50%;
             border: 2px solid var(--dorado);
+            object-fit: cover;
         }
 
         .logo-area h1 {
@@ -68,7 +69,7 @@
             color: var(--dorado);
         }
 
-        /* Sección Principal (Hero) */
+        /* Hero Section */
         .hero {
             background: linear-gradient(rgba(11, 27, 61, 0.85), rgba(11, 27, 61, 0.95)), url('https://unsplash.com');
             background-size: cover;
@@ -95,7 +96,7 @@
             line-height: 1.6;
         }
 
-        /* Catálogo de Libros */
+        /* Books Catalog */
         .catalog {
             padding: 60px 5%;
             background-color: var(--gris-claro);
@@ -174,7 +175,40 @@
             border: 2px solid var(--dorado);
         }
 
-        /* Pie de página */
+        /* Contact Section */
+        .contact {
+            padding: 60px 5%;
+            text-align: center;
+            background-color: var(--blanco);
+        }
+
+        .contact h3 {
+            font-size: 2rem;
+            color: var(--azul-profundo);
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #E0E0E0;
+            border-radius: 8px;
+            background-color: var(--gris-claro);
+        }
+
+        .contact-info h4 {
+            color: var(--azul-profundo);
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+
+        .contact-info p {
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        /* Footer */
         footer {
             background-color: var(--azul-profundo);
             color: var(--blanco);
@@ -189,49 +223,59 @@
 
     <header>
         <div class="logo-area">
-            <!-- Espacio para tu logo circular -->
-            <img src="logo.png" alt="NCE Logo">
+            <!-- Tu logo cargado automáticamente -->
+            <img src="https://craigslist.org" alt="NCE Logo">
             <h1>NEW CREATION EXPERIENCE</h1>
         </div>
         <nav>
-            <a href="#">Inicio</a>
-            <a href="#">Libros</a>
-            <a href="#">Biografía</a>
-            <a href="#">Contacto</a>
+            <a href="#">Home</a>
+            <a href="#books">Books</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
 
-    <section class="hero">
-        <h2>Bienvenido a la Experiencia</h2>
-        <p>Inspirando mentes y transformando realidades a través de la literatura. Una plataforma editorial diseñada para autores con propósito.</p>
+    <section class="hero" id="about">
+        <h2>Welcome to the Experience</h2>
+        <p>Inspiring minds and transforming realities through literature. A publishing platform custom-built for visionary authors with a purpose.</p>
     </section>
 
-    <section class="catalog">
-        <h3>Obras Destacadas</h3>
+    <section class="catalog" id="books">
+        <h3>Featured Masterpieces</h3>
         <div class="book-grid">
             <div class="book-card">
-                <div class="book-cover-placeholder">Libro #1</div>
-                <h4>Título del Libro de Prueba</h4>
-                <p>Una breve descripción o sinopsis de la obra literaria para capturar al lector.</p>
-                <a href="#" class="btn-buy">Comprar en Amazon</a>
+                <div class="book-cover-placeholder">Book #1</div>
+                <h4>Sample Book Title</h4>
+                <p>An engaging short summary or synopsis of the literary work to capture the reader's attention.</p>
+                <a href="#" class="btn-buy">Buy on Amazon</a>
             </div>
             <div class="book-card">
-                <div class="book-cover-placeholder">Libro #2</div>
-                <h4>Título del Libro de Prueba</h4>
-                <p>Una breve descripción o sinopsis de la obra literaria para capturar al lector.</p>
-                <a href="#" class="btn-buy">Comprar en Amazon</a>
+                <div class="book-cover-placeholder">Book #2</div>
+                <h4>Sample Book Title</h4>
+                <p>An engaging short summary or synopsis of the literary work to capture the reader's attention.</p>
+                <a href="#" class="btn-buy">Buy on Amazon</a>
             </div>
             <div class="book-card">
-                <div class="book-cover-placeholder">Libro #3</div>
-                <h4>Título del Libro de Prueba</h4>
-                <p>Una breve descripción o sinopsis de la obra literaria para capturar al lector.</p>
-                <a href="#" class="btn-buy">Comprar en Amazon</a>
+                <div class="book-cover-placeholder">Book #3</div>
+                <h4>Sample Book Title</h4>
+                <p>An engaging short summary or synopsis of the literary work to capture the reader's attention.</p>
+                <a href="#" class="btn-buy">Buy on Amazon</a>
             </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h3>Get in Touch</h3>
+        <div class="contact-info">
+            <h4>Tonny</h4>
+            <p><strong>Editorial Director</strong></p>
+            <p>Email: contact@newcreationexperience.com</p>
+            <p>Let's bring your story to life. Reach out for publishing inquiries.</p>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 New Creation Experience Publishing. Todos los derechos reservados.</p>
+        <p>&copy; 2026 New Creation Experience Publishing. All rights reserved.</p>
     </footer>
 
 </body>
