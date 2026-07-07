@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Creation Experience Publishing</title>
+    <style>
+        :root {
+            --azul-profundo: #0B1B3D;
+            --dorado: #D4AF37;
+            --blanco: #FFFFFF;
+            --gris-claro: #F5F7FA;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--blanco);
+            color: #333;
+        }
+
+        /* Cabecera / Menú */
+        header {
+            background-color: var(--azul-profundo);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid var(--dorado);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-area img {
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+            border: 2px solid var(--dorado);
+        }
+
+        .logo-area h1 {
+            color: var(--blanco);
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            color: var(--blanco);
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--dorado);
+        }
+
+        /* Sección Principal (Hero) */
+        .hero {
+            background: linear-gradient(rgba(11, 27, 61, 0.85), rgba(11, 27, 61, 0.95)), url('https://unsplash.com');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--blanco);
+            padding: 0 20px;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            color: var(--dorado);
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            line-height: 1.6;
+        }
+
+        /* Catálogo de Libros */
+        .catalog {
+            padding: 60px 5%;
+            background-color: var(--gris-claro);
+            text-align: center;
+        }
+
+        .catalog h3 {
+            font-size: 2rem;
+            color: var(--azul-profundo);
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .catalog h3::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--dorado);
+            margin: 10px auto 0;
+        }
+
+        .book-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .book-card {
+            background: var(--blanco);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .book-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .book-cover-placeholder {
+            width: 100%;
+            height: 300px;
+            background-color: var(--azul-profundo);
+            color: var(--dorado);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            margin-bottom: 15px;
+            border-radius: 4px;
+        }
+
+        .book-card h4 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--azul-profundo);
+        }
+
+        .btn-buy {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--dorado);
+            color: var(--azul-profundo);
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+            margin-top: 15px;
+            transition: background 0.3s;
+        }
+
+        .btn-buy:hover {
+            background-color: var(--blanco);
+            border: 2px solid var(--dorado);
+        }
+
+        /* Pie de página */
+        footer {
+            background-color: var(--azul-profundo);
+            color: var(--blanco);
+            text-align: center;
+            padding: 30px;
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-area">
+            <!-- Espacio para tu logo circular -->
+            <img src="logo.png" alt="NCE Logo">
+            <h1>NEW CREATION EXPERIENCE</h1>
+        </div>
+        <nav>
+            <a href="#">Inicio</a>
+            <a href="#">Libros</a>
+            <a href="#">Biografía</a>
+            <a href="#">Contacto</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Bienvenido a la Experiencia</h2>
+        <p>Inspirando mentes y transformando realidades a través de la literatura. Una plataforma editorial diseñada para autores con propósito.</p>
+    </section>
+
+    <section class="catalog">
+        <h3>Obras Destacadas</h3>
+        <div class="book-grid">
+            <div class="book-card">
+                <div class="book-cover-placeholder">Libro #1</div>
+                <h4>Título del Libro de Prueba</h4>
+                <p>Una breve descripción o sinopsis de la obra literaria para capturar al lector.</p>
+                <a href="#" class="btn-buy">Comprar en Amazon</a>
+            </div>
+            <div class="book-card">
+                <div class="book-cover-placeholder">Libro #2</div>
+                <h4>Título del Libro de Prueba</h4>
+                <p>Una breve descripción o sinopsis de la obra literaria para capturar al lector.</p>
+                <a href="#" class="btn-buy">Comprar en Amazon</a>
+            </div>
+            <div class="book-card">
+                <div class="book-cover-placeholder">Libro #3</div>
+                <h4>Título del Libro de Prueba</h4>
+                <p>Una breve descripción o sinopsis de la obra literaria para capturar al lector.</p>
+                <a href="#" class="btn-buy">Comprar en Amazon</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 New Creation Experience Publishing. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
